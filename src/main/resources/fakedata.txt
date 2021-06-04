@@ -1,0 +1,238 @@
+
+
+    @GetMapping("/create")
+//    @ResponseStatus(HttpStatus.CREATED)
+    public void create() {
+        MenuDetail menuDetail1 = MenuDetail.builder()
+                .title(Arrays.asList(new MultiLanguageText("az", "Salat"), new MultiLanguageText("en", "Salat ingce"), new MultiLanguageText("ru", "Salat rusca")))
+                .description(Arrays.asList(new MultiLanguageText("az", "Pomidor, xiyar"), new MultiLanguageText("en", "Cucumber, pomato"), new MultiLanguageText("ru", "rusca")))
+                .price(10)
+                .image("https://www.meltingpot.com/red-bank-nj/files/3139/WorldChampionCheese-SP-BevGroup-Flex.jpg")
+                .build();
+
+        MenuDetail menuDetail2 = MenuDetail.builder()
+                .title(Arrays.asList(new MultiLanguageText("az", "Salat"), new MultiLanguageText("en", "Salat ingce"), new MultiLanguageText("ru", "Salat rusca")))
+                .description(Arrays.asList(new MultiLanguageText("az", "Pomidor, xiyar"), new MultiLanguageText("en", "Cucumber, pomato"), new MultiLanguageText("ru", "rusca")))
+                .price(10)
+                .image("https://www.meltingpot.com/red-bank-nj/files/3139/WorldChampionCheese-SP-BevGroup-Flex.jpg")
+                .build();
+
+
+        Menu menu1 = Menu.builder()
+                .title(Arrays.asList(new MultiLanguageText("az", "İçki menyusu"), new MultiLanguageText("en", "Drink menu"), new MultiLanguageText("ru", "Drink menu rusca")))
+                .image("https://www.meltingpot.com/red-bank-nj/files/3139/WorldChampionCheese-SP-BevGroup-Flex.jpg")
+                .menuDetail(Arrays.asList(menuDetail1, menuDetail2))
+                .build();
+
+        Menu menu2 = Menu.builder()
+                .title(Arrays.asList(new MultiLanguageText("az", "İçki menyusu"), new MultiLanguageText("en", "Drink menu"), new MultiLanguageText("ru", "Drink menu rusca")))
+                .image("https://www.meltingpot.com/red-bank-nj/files/3139/WorldChampionCheese-SP-BevGroup-Flex.jpg")
+                .menuDetail(Arrays.asList(menuDetail1, menuDetail2))
+                .build();
+
+        String test = "Restoran\n" +
+                "\n" +
+                "23.12.2019 - Bitmə tarixi: 31.12.2020\n" +
+                "\n" +
+                "586\n" +
+                "\n" +
+                "https://www.fb.com/wolt.azerbaijan/\n" +
+                "\n" +
+                "kampaniya, endirim, endirimler, aksiya, aksiyalar";
+
+        Offer offer1 = Offer.builder()
+                .image("https://baku.cafe/img/special/78.jpg")
+                .desciption(Arrays.asList(new MultiLanguageText("az", test), new MultiLanguageText("en", test), new MultiLanguageText("ru", test)))
+                .subDescription(Arrays.asList(new MultiLanguageText("az", "Xanımlara pulsuz qəlyan"), new MultiLanguageText("en", "Xanımlara pulsuz qəlyan"), new MultiLanguageText("ru", "Xanımlara pulsuz qəlyan")))
+                .offerHours("10.00 - 11.00")
+                .createdAt(LocalDateTime.now())
+                .expiredAt(LocalDateTime.now().plusDays(2))
+                .build();
+
+        Offer offer2 = Offer.builder()
+                .image("https://baku.cafe/img/special/78.jpg")
+                .desciption(Arrays.asList(new MultiLanguageText("az", test), new MultiLanguageText("en", test), new MultiLanguageText("ru", test)))
+                .subDescription(Arrays.asList(new MultiLanguageText("az", "Xanımlara pulsuz qəlyan"), new MultiLanguageText("en", "Xanımlara pulsuz qəlyan"), new MultiLanguageText("ru", "Xanımlara pulsuz qəlyan")))
+                .offerHours("10.00 - 11.00")
+                .createdAt(LocalDateTime.now())
+                .expiredAt(LocalDateTime.now().plusDays(2))
+                .build();
+
+
+        Category cat1 = Category.builder()
+                .titl        categoryRepository.save(category1);
+e(Arrays.asList(new MultiLanguageText("az", "Klub"), new MultiLanguageText("en", "Club"), new MultiLanguageText("ru", "rusca_club")))
+                .image("https://baku.cafe/img/r/85/121.jpg")
+                .build();
+
+        Category cat2 = Category.builder()
+                .title(Arrays.asList(
+                        new MultiLanguageText("az", "Sinema"),
+                        new MultiLanguageText("en", "Cinema"),
+                        new MultiLanguageText("ru", "rusca_sinema")))
+                .image("https://baku.cafe/img/r/85/123.jpg")
+                .build();
+
+        Category cat3 = Category.builder()
+                .title(Arrays.asList(
+                        new MultiLanguageText("az", "Karaoke"),
+                        new MultiLanguageText("en", "Karaoke"),
+                        new MultiLanguageText("ru", "Karaoke")))
+                .image("https://baku.cafe/img/r/85/123.jpg")
+                .build();
+
+        Category cat4 = Category.builder()
+                .title(Arrays.asList(
+                        new MultiLanguageText("az", "Restorant"),
+                        new MultiLanguageText("en", "Restaurant"),
+                        new MultiLanguageText("ru", "Restaurant")))
+                .image("https://baku.cafe/img/r/85/123.jpg")
+                .build();
+
+        Category cat5 = Category.builder()
+                .title(Arrays.asList(
+                        new MultiLanguageText("az", "Pub"),
+                        new MultiLanguageText("en", "Pub"),
+                        new MultiLanguageText("ru", "Pub")))
+                .image("https://baku.cafe/img/r/85/123.jpg")
+                .build();
+
+        Category cat6 = Category.builder()
+                .title(Arrays.asList(
+                        new MultiLanguageText("az", "Lounge"),
+                        new MultiLanguageText("en", "Lounge"),
+                        new MultiLanguageText("ru", "Lounge")))
+                .image("https://baku.cafe/img/r/85/123.jpg")
+                .build();
+
+        Category cat7 = Category.builder()
+                .title(Arrays.asList(
+                        new MultiLanguageText("az", "Steak House"),
+                        new MultiLanguageText("en", "Steak House"),
+                        new MultiLanguageText("ru", "Steak House")))
+                .image("https://baku.cafe/img/r/85/123.jpg")
+                .build();
+
+        Category cat8 = Category.builder()
+                .title(Arrays.asList(
+                        new MultiLanguageText("az", "Anti cafe"),
+                        new MultiLanguageText("en", "Anti cafe"),
+                        new MultiLanguageText("ru", "Anti cafe")))
+                .image("https://baku.cafe/img/r/85/123.jpg")
+                .build();
+
+        Category cat9 = Category.builder()
+                .title(Arrays.asList(
+                        new MultiLanguageText("az", "Kabinet"),
+                        new MultiLanguageText("en", "Kabinet"),
+                        new MultiLanguageText("ru", "Kabinet")))
+                .image("https://baku.cafe/img/r/85/123.jpg")
+                .build();
+
+        Category cat10 = Category.builder()
+                .title(Arrays.asList(
+                        new MultiLanguageText("az", "Biznes Lanç"),
+                        new MultiLanguageText("en", "Biznes Lanç"),
+                        new MultiLanguageText("ru", "Biznes Lanç")))
+                .image("https://baku.cafe/img/r/85/123.jpg")
+                .build();
+
+
+
+
+
+        Restaurant r1 = Restaurant.builder()
+                .title("The Place")
+                .coverImage("https://baku.cafe/img/cafe/99.jpg")
+                .website("kolorit.az")
+                .slogan("Kolorit Kafe")
+                .menuPdf("https://baku.cafe/menu/18.pdf")
+                .description("Restorant, dining")
+                .location(new Location("Azerbaijan State Economic University (ASEU)\\n6 Istiglaliyyat Street\\nAZ\\n1001 Baku", "40.3839", "49.8233"))
+                .averagePrice("30 ~ 100")
+                .metro("28 may")
+                .phone("+994553941387")
+                .email("info@kolorit.az")
+                .paymentMethod("PayPal, Visa")
+                .dressCode("casual")
+                .parking(false)
+                .openTime("13:00:00")
+                .closeTime("01:00:00")
+                .rezervationConfirmation(false)
+                .rezervationRange(30)
+                .rezervationCancellationPeriod(50)
+                .rezervationPrePayment(50)
+                .restaurantStatus("1")
+                .isPromoted(true)
+                .ratingCount(0)
+                .bonus(100)
+                .joinedAt(LocalDateTime.now().plusHours(4))
+                .galeries(Arrays.asList("https://baku.cafe/img/r/5/98.jpg", "https://baku.cafe/img/r/5/98.jpg", "https://baku.cafe/img/r/5/98.jpg", "https://baku.cafe/img/r/5/98.jpg", "https://baku.cafe/img/r/5/98.jpg", "https://baku.cafe/img/r/5/98.jpg"))
+                .cuisines(Arrays.asList("Indian", "Asian", "Mexican"))
+                .features(Arrays.asList("Terrace", "Cith view",  "Shisha"))
+                .menu(Arrays.asList(menu1, menu2))
+                .offers(Arrays.asList(offer1, offer2))
+                .build();
+
+
+        Category category1 = categoryRepository.findById("60b45e4ad5416939eb57d66d").get();
+        Category category2 = categoryRepository.findById("60b45e4ad5416939eb57d66e").get();
+        Category category3 = categoryRepository.findById("60b45e4ad5416939eb57d66f").get();
+        Category category4 = categoryRepository.findById("60b45e4ad5416939eb57d670").get();
+        Category category5 = categoryRepository.findById("60b45e4ad5416939eb57d671").get();
+        Category category6 = categoryRepository.findById("60b45e4ad5416939eb57d672").get();
+        Category category7 = categoryRepository.findById("60b45e4ad5416939eb57d673").get();
+        Category category8 = categoryRepository.findById("60b45e4ad5416939eb57d674").get();
+        Category category9 = categoryRepository.findById("60b45e4ad5416939eb57d675").get();
+        Category category10 = categoryRepository.findById("60b45e4ad5416939eb57d676").get();
+
+        Restaurant restaurant1 = restaurantRepository.findOneByTitle("The Place").get();
+        Restaurant restaurant2 = restaurantRepository.findOneByTitle("Arabesque").get();
+        Restaurant restaurant3 = restaurantRepository.findOneByTitle("7 Sunday").get();
+        Restaurant restaurant4 = restaurantRepository.findOneByTitle("Okean").get();
+        Restaurant restaurant5 = restaurantRepository.findOneByTitle("Court").get();
+        Restaurant restaurant6 = restaurantRepository.findOneByTitle("Metropole").get();
+        Restaurant restaurant7 = restaurantRepository.findOneByTitle("Black").get();
+
+//        System.out.println(restaurant2);
+
+//        List<Category> categories = restaurant.getCategories();
+
+        category1.setRestaurants(Arrays.asList(restaurant1, restaurant4, restaurant6));
+        category2.setRestaurants(Arrays.asList(restaurant1, restaurant4, restaurant5));
+        category3.setRestaurants(Arrays.asList(restaurant3, restaurant6, restaurant7));
+        category4.setRestaurants(Arrays.asList(restaurant2, restaurant4, restaurant7));
+        category5.setRestaurants(Arrays.asList(restaurant1, restaurant3, restaurant5));
+        category6.setRestaurants(Arrays.asList(restaurant1, restaurant2, restaurant3));
+        category7.setRestaurants(Arrays.asList(restaurant3, restaurant4));
+        category8.setRestaurants(Arrays.asList(restaurant1, restaurant2, restaurant5, restaurant7));
+        category9.setRestaurants(Arrays.asList(restaurant3, restaurant6, restaurant7));
+        category10.setRestaurants(Arrays.asList(restaurant1, restaurant4, restaurant5));
+        categoryRepository.save(category1);
+        categoryRepository.save(category2);
+        categoryRepository.save(category3);
+        categoryRepository.save(category4);
+        categoryRepository.save(category5);
+        categoryRepository.save(category6);
+        categoryRepository.save(category7);
+        categoryRepository.save(category8);
+        categoryRepository.save(category9);
+        categoryRepository.save(category10);
+//        List<Restaurant> restaurant1 = category.getRestaurants();
+//        System.out.println(restaurant1);
+//        return restaurant1;
+//        categoryRepository.save(cat1);
+//        categoryRepository.save(cat2);
+//        categoryRepository.save(cat3);
+//        categoryRepository.save(cat4);
+//        categoryRepository.save(cat5);
+//        categoryRepository.save(cat6);
+//        categoryRepository.save(cat7);
+//        categoryRepository.save(cat8);
+//        categoryRepository.save(cat9);
+//        categoryRepository.save(cat10);
+//        restaurant.setCategories(Arrays.asList(cat1, cat3, cat7, cat10));
+//        restaurantRepository.save(r1);
+
+
+    }

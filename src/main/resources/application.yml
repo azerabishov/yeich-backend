@@ -1,0 +1,22 @@
+jwt:
+  secret:
+    verylongsecertkeyverylongsecertkeyverylongsecertkey
+
+server:
+  port: 9090
+
+
+spring:
+  mail:
+    host: smtp.mailtrap.io
+    port: 2525
+    username: your-mailtrap-username
+    password: your-mailtrap-password
+  data:
+    mongodb:
+      username: azer
+      password: azer2937
+      database: yeich
+      port: 27017
+      host: localhost
+
